@@ -1,0 +1,10 @@
+<h1>Club Profile</h1>
+<% if @clubs.blank? %>
+<p>No clubs to display</p>
+<% else %>
+  <ul id="clubs">
+        <li>
+          <%= @clubs.name + " " + @clubs.description + " " + @clubs.location + " " + @clubs.club_type %>
+        </li>
+  </ul>
+<% end %>

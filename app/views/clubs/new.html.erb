@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-2 col-sm-offset-2">
+        <div class="well well-lg">
+        <%= form_for @clubs, url: {action: "create"},html: {class: "form-horizontal"} do |f| %>
+          <div class="form-group">
+            <%= label_tag(:name, "Club Name", class: 'col-lg-4 col-md-4 col-sm-4 control-label') %>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <%= f.text_field :name, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= label_tag(:description, "Club Description", class: 'col-lg-4 col-md-4 col-sm-4 control-label') %>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <%= f.text_area :description, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= label_tag(:club_type, "Select Club Type", class: 'col-lg-4 col-md-4 col-sm-4 control-label') %>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <%= f.select :club_type, ['Running', 'Yoga', 'Tag Rugby','Football', 'Basketball', 'Table Tennis'], {}, {class: 'form-control', include_blank: true} %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= label_tag(:club_type, "Meetup frequency", class: 'col-lg-4 col-md-4 col-sm-4 control-label') %>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <%= f.text_field :frequency, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= label_tag(:location, "Select Club Location", class: 'col-lg-4 col-md-4 col-sm-4 control-label') %>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <%= f.text_field :location, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-4">
+              <button type="submit" class="btn btn-default">Add Club</button>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

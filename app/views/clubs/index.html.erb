@@ -1,0 +1,27 @@
+<h1>Clubs</h1>
+
+<div class="container">
+
+<% if @clubs.blank? %>
+<p>No clubs to display</p>
+<% else %>
+      <% @clubs.each_slice(3) do |abc| %>
+        <div class="row">
+          <% abc.each do |ab| %>
+            <div class="col-md-4">
+              <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title"><%= ab.name %></h4>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= ab.location %></h6>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= ab.club_type %></h6>
+                    <p class="card-text"><%= ab.description %></p>
+                    <a href="" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+<% end %>
+</div>
