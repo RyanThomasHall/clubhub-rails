@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a ClassPass-esque site written in Ruby on Rails. I've created the site as a learning project to improve my understanding of Rails. I'm loosely following Michael Hartls Ruby on Rails tutorial. 
 
-Things you may want to cover:
+Still very much a work in progress, but the final project should:
 
-* Ruby version
+* have a user signup
 
-* System dependencies
+* allow users to create a profile for clubs/groups/teams
 
-* Configuration
+* allow the public to filter and search clubs/groups/teams by location or type
 
-* Database creation
+* allow users to post messages to the profiles
 
-* Database initialization
+* allow users to follow profiles for updates
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
